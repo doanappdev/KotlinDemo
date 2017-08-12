@@ -19,9 +19,13 @@ import javax.inject.Singleton
      */
     @Provides
     @Singleton
-    fun provideApplicationContext(): Application {
+    fun provideApplication(): Application {
         return application
     }
+
+    @Provides
+    @Singleton
+    fun provideContext() : Context = application
 
     @Provides
     @Singleton

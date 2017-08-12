@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">KotlinDemo</string>
     <string name="btn_txt_record">Record</string>
+    <string name="btn_txt_news">News</string>
 </resources>

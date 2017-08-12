@@ -8,6 +8,7 @@ import android.os.Bundle
 import android.provider.MediaStore
 import android.util.Log
 import android.view.View
+import com.doanappdev.kotlindemo.news.NewsActivity
 
 import kotlinx.android.synthetic.main.activity_main.*
 import org.jetbrains.anko.toast
@@ -41,11 +42,17 @@ class MainActivity : AppCompatActivity() {
 
 
         videoButton.setOnClickListener{callVideoApp()}
+        newsButton.setOnClickListener{startNewsActivity()}
 
         videoView.setOnCompletionListener {
             videoView.visibility = View.GONE
             videoButton.visibility = View.VISIBLE
         }
+    }
+
+    fun startNewsActivity() {
+        val newsIntent = Intent(this, NewsActivity::class.java)
+        startActivity(newsIntent)
     }
 
 
