@@ -10,7 +10,8 @@ import javax.inject.Singleton
 
     @Provides @Singleton
     fun provideRetrofit() : Retrofit {
-        return Retrofit.Builder().baseUrl("https://www.reddit.com")
+        return Retrofit.Builder()
+                .baseUrl("https://www.reddit.com")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build()
     }
